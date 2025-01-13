@@ -1,11 +1,13 @@
-class TunedPercussion extends PercussiveInstruments implements Adjustable {
+public class TunedPercussion extends PercussiveInstruments implements Adjustable {
     private String pitch;
 
+    // constructor
     public TunedPercussion(String model, String sound, String pitch) {
         super(model, sound);
         this.pitch = pitch;
     }
 
+    // setter and getter for pitch
     public String getPitch() {
         return pitch;
     }
@@ -14,6 +16,7 @@ class TunedPercussion extends PercussiveInstruments implements Adjustable {
         this.pitch = pitch;
     }
 
+    // Adjustable interface
     public void adjust() {
         System.out.println(getModel() + " is being adjusted for pitch.");
     }
